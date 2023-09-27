@@ -37,9 +37,10 @@ jobs:
 
     - name: Clean and install
       run: mvn clean install
+      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
 
   
-    - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    # - uses: actions/checkout@v3
+    # - name: Build the Docker image
+    #   run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
 
