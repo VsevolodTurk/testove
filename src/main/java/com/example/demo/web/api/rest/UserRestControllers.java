@@ -2,7 +2,6 @@ package com.example.demo.web.api.rest;
 
 import com.example.demo.dto.UserRestDto;
 import com.example.demo.service.UserService;
-import jakarta.validation.constraints.Positive;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import javax.validation.constraints.Positive;
 import java.util.List;
 
 @RestController

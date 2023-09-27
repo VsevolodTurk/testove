@@ -1,11 +1,12 @@
 package com.example.demo.handler;
 
-import jakarta.validation.ValidationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+
+import javax.validation.ValidationException;
 
 @RestControllerAdvice
 public class CustomErrorHandler extends ResponseEntityExceptionHandler {
