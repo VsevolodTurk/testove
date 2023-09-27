@@ -1,4 +1,4 @@
-FROM brody/openjdk11-alpine
+FROM openjdk:22-jdk-oracle
 ARG JAR_FILE=target/demo-0.0.1-SNAPSHOT.jar
 COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
