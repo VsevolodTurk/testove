@@ -30,7 +30,7 @@ public class UserService {
     }
 
     public synchronized List<UserRestDto> getTop20UserInfoByUserId(Integer userId) {
-        return dataService.findByUserId(userId).orElseThrow()
+        return dataService.findByUserId(userId)
                 .stream()
                 .sorted(Comparator.comparing(User::getResult).thenComparing(User::getLevelId).reversed())
                 .map(convertUserToUserRestDtoFunction())
@@ -39,7 +39,7 @@ public class UserService {
     }
 
     public synchronized List<UserRestDto> getTop20UserInfoByLevelId(Integer levelId) {
-        return dataService.findByLevelId(levelId).orElseThrow()
+        return dataService.findByLevelId(levelId)
                 .stream()
                 .sorted(Comparator.comparing(User::getResult).thenComparing(User::getUserId).reversed())
                 .map(convertUserToUserRestDtoFunction())
